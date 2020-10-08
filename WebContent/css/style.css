@@ -93,22 +93,21 @@ button {
     background-color: #f8d7da;
 }
 
-tablee#employee_list th {
+table#employee_list th {
     width: 30%;
     padding: 10px 2%;
 }
 
-table#emplloyee_list td  {
+table#employee_list td {
     width: 29%;
     padding: 10px 2%;
 }
 
 tr.row1 {
-    background-color: #f2f2f2;
+        background-color: #f2f2f2;
 }
-
 tr.row0 {
-    back-ground-color: #ffffff;
+        background-color: #ffffff;
 }
 
 select {
@@ -141,4 +140,26 @@ h1 a {
 h1 {
     font-size: 24px;
     display: inline;
+}
+
+
+table#report_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+
+table#report_list .report_name {
+    width: 20%;
+    padding: 10px 2%;
+}
+table#report_list .report_date {
+    width: 20%;
+}
+
+table#report_list .report_title {
+    width: 37%;
+}
+
+table#report_list .report_action {
+    width: 13%;
 }

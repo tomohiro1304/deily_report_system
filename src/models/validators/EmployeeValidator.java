@@ -38,29 +38,27 @@ public class EmployeeValidator {
         if(code_duplicate_check_flag) {
             EntityManager em = DBUtil.createEntityManager();
             long employees_count = (long)em.createNamedQuery("checkRegisteredCode", Long.class)
-                                             .setParameter("code", code)
+                                           .setParameter("code", code)
                                              .getSingleResult();
             em.close();
             if(employees_count > 0) {
-                return "入力された社員番号の情報はすでに存在してます。";
+                return "入力された社員番号の情報はすでに存在しています。";
             }
         }
 
         return "";
     }
 
-
     private static String _validateName(String name) {
-        if(name ==null || name.equals("")) {
+        if(name == null || name.equals("")) {
             return "氏名を入力してください。";
         }
 
         return "";
     }
 
-
     private static String _validatePassword(String password, Boolean password_check_flag) {
-        if(password_check_flag && (password == null ||password.equals(""))) {
+        if(password_check_flag && (password == null || password.equals(""))) {
             return "パスワードを入力してください。";
         }
         return "";
